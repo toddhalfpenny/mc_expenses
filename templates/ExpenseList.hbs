@@ -1,0 +1,16 @@
+<ul class="topcoat-list list">
+{{#each this}}
+    <li class="topcoat-list__item">
+        <a href="#expenses/{{id}}">
+            <p>{{name}} : &pound{{toPounds value}}</p>
+            <p>{{prettyDate datetime}} : 
+            {{#if approved}}
+            	<span>Approved</span>
+            {{else}}
+            	<span>Pending</span>
+            {{/if}}
+            </p>
+        </a>
+    </li>
+{{/each}}
+</ul>
